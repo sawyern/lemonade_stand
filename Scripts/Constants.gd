@@ -42,6 +42,8 @@ const DIFFICULTY_1 = 7
 const DIFFICULTY_2 = 14
 const DIFFICULTY_3 = 21
 
+# Given number, format as curreny, return as String
+# ie. 100.3 -> $100.30; 412.1111 -> $412.11
 static func as_currency(number):
 	var txt_numb = "%.2f" % number
 	for idx in range(txt_numb.find(".") - 3, 0, -3):
