@@ -12,9 +12,9 @@ const WELCOME_SCENE = "Welcome"
 
 const SPAM_1_PRICE = 2.00
 const SPAM_1_QTY = 1
-const SPAM_2_PRICE = 1.75
+const SPAM_2_PRICE = 1.80
 const SPAM_2_QTY = 5
-const SPAM_3_PRICE = 1.25
+const SPAM_3_PRICE = 1.75
 const SPAM_3_QTY = 10
 
 const RICE_1_PRICE = 2.00
