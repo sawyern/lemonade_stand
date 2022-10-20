@@ -8,4 +8,4 @@ func _restart():
 	Globals.curr_day = 1
 	Globals.curr_money = Constants.START_MONEY
 	SceneLoader.main = self
-	SceneLoader._load_scene(Constants.WELCOME_SCENE)
+	SceneLoader._load_scene("Welcome")
