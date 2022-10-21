@@ -1,3 +1,244 @@
-[gd_scene format=2]
+[gd_scene load_steps=6 format=2]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource path="res://Scripts/Recipe_Spam.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Recipe_Nori.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Recipe_Rice.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Recipe_Wrap.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Recipe.gd" type="Script" id=5]
+
+[node name="Recipe" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.796078, 0.521569, 0.227451, 1 )
+
+[node name="RecipeVbox" type="VBoxContainer" parent="."]
+margin_left = 346.0
+margin_top = 148.0
+margin_right = 666.0
+margin_bottom = 336.0
+
+[node name="SpamCountContainer" type="HBoxContainer" parent="RecipeVbox"]
+margin_right = 320.0
+margin_bottom = 44.0
+script = ExtResource( 1 )
+
+[node name="SpamLabelContainer" type="VBoxContainer" parent="RecipeVbox/SpamCountContainer"]
+margin_right = 84.0
+margin_bottom = 44.0
+
+[node name="SpamLabel" type="RichTextLabel" parent="RecipeVbox/SpamCountContainer/SpamLabelContainer"]
+margin_right = 84.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 50, 20 )
+text = "Spam"
+
+[node name="SpamOwnedContainer" type="HBoxContainer" parent="RecipeVbox/SpamCountContainer/SpamLabelContainer"]
+margin_top = 24.0
+margin_right = 84.0
+margin_bottom = 44.0
+
+[node name="SpamOwned" type="RichTextLabel" parent="RecipeVbox/SpamCountContainer/SpamLabelContainer/SpamOwnedContainer"]
+margin_right = 30.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 30, 20 )
+text = "100"
+
+[node name="SpamOwnedLabel" type="RichTextLabel" parent="RecipeVbox/SpamCountContainer/SpamLabelContainer/SpamOwnedContainer"]
+margin_left = 34.0
+margin_right = 84.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 50, 20 )
+text = "Cans"
+
+[node name="SpamMinus" type="Button" parent="RecipeVbox/SpamCountContainer"]
+margin_left = 88.0
+margin_right = 108.0
+margin_bottom = 44.0
+rect_min_size = Vector2( 20, 10 )
+text = "-"
+
+[node name="SpamCount" type="RichTextLabel" parent="RecipeVbox/SpamCountContainer"]
+margin_left = 112.0
+margin_right = 142.0
+margin_bottom = 44.0
+rect_min_size = Vector2( 30, 40 )
+text = "100"
+
+[node name="SpamPlus" type="Button" parent="RecipeVbox/SpamCountContainer"]
+margin_left = 146.0
+margin_right = 166.0
+margin_bottom = 44.0
+rect_min_size = Vector2( 20, 40 )
+text = "+"
+
+[node name="SpamDesc" type="RichTextLabel" parent="RecipeVbox/SpamCountContainer"]
+margin_left = 170.0
+margin_right = 320.0
+margin_bottom = 44.0
+rect_min_size = Vector2( 150, 0 )
+text = "Slices Per Can"
+
+[node name="RiceCountContainer" type="HBoxContainer" parent="RecipeVbox"]
+margin_top = 48.0
+margin_right = 320.0
+margin_bottom = 92.0
+script = ExtResource( 3 )
+
+[node name="RiceLabelContainer" type="VBoxContainer" parent="RecipeVbox/RiceCountContainer"]
+margin_right = 84.0
+margin_bottom = 44.0
+
+[node name="RiceLabel" type="RichTextLabel" parent="RecipeVbox/RiceCountContainer/RiceLabelContainer"]
+margin_right = 84.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 50, 20 )
+text = "Rice"
+
+[node name="RiceOwnedContainer" type="HBoxContainer" parent="RecipeVbox/RiceCountContainer/RiceLabelContainer"]
+margin_top = 24.0
+margin_right = 84.0
+margin_bottom = 44.0
+
+[node name="RiceOwned" type="RichTextLabel" parent="RecipeVbox/RiceCountContainer/RiceLabelContainer/RiceOwnedContainer"]
+margin_right = 30.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 30, 20 )
+text = "100"
+
+[node name="RiceOwnedLabel" type="RichTextLabel" parent="RecipeVbox/RiceCountContainer/RiceLabelContainer/RiceOwnedContainer"]
+margin_left = 34.0
+margin_right = 84.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 50, 20 )
+text = "Bags"
+
+[node name="RiceDesc" type="RichTextLabel" parent="RecipeVbox/RiceCountContainer"]
+margin_left = 88.0
+margin_right = 238.0
+margin_bottom = 44.0
+rect_min_size = Vector2( 150, 0 )
+text = "1 Bag = 4 Cups
+1 Cup = 2 Musubi"
+
+[node name="NoriCountContainer" type="HBoxContainer" parent="RecipeVbox"]
+margin_top = 96.0
+margin_right = 320.0
+margin_bottom = 140.0
+script = ExtResource( 2 )
+
+[node name="NoriLabelContainer" type="VBoxContainer" parent="RecipeVbox/NoriCountContainer"]
+margin_right = 84.0
+margin_bottom = 44.0
+
+[node name="NoriLabel" type="RichTextLabel" parent="RecipeVbox/NoriCountContainer/NoriLabelContainer"]
+margin_right = 84.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 50, 20 )
+text = "Nori"
+
+[node name="NoriOwnedContainer" type="HBoxContainer" parent="RecipeVbox/NoriCountContainer/NoriLabelContainer"]
+margin_top = 24.0
+margin_right = 84.0
+margin_bottom = 44.0
+
+[node name="NoriOwned" type="RichTextLabel" parent="RecipeVbox/NoriCountContainer/NoriLabelContainer/NoriOwnedContainer"]
+margin_right = 30.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 30, 20 )
+text = "100"
+
+[node name="NoriOwnedLabel" type="RichTextLabel" parent="RecipeVbox/NoriCountContainer/NoriLabelContainer/NoriOwnedContainer"]
+margin_left = 34.0
+margin_right = 84.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 50, 20 )
+text = "Sheets"
+
+[node name="NoriMinus" type="Button" parent="RecipeVbox/NoriCountContainer"]
+margin_left = 88.0
+margin_right = 108.0
+margin_bottom = 44.0
+rect_min_size = Vector2( 20, 10 )
+text = "-"
+
+[node name="NoriCount" type="RichTextLabel" parent="RecipeVbox/NoriCountContainer"]
+margin_left = 112.0
+margin_right = 142.0
+margin_bottom = 44.0
+rect_min_size = Vector2( 30, 40 )
+text = "100"
+
+[node name="NoriPlus" type="Button" parent="RecipeVbox/NoriCountContainer"]
+margin_left = 146.0
+margin_right = 166.0
+margin_bottom = 44.0
+rect_min_size = Vector2( 20, 40 )
+text = "+"
+
+[node name="NoriDesc" type="RichTextLabel" parent="RecipeVbox/NoriCountContainer"]
+margin_left = 170.0
+margin_right = 320.0
+margin_bottom = 44.0
+rect_min_size = Vector2( 150, 0 )
+text = "Pieces Per Sheet"
+
+[node name="WrapCountContainer" type="HBoxContainer" parent="RecipeVbox"]
+margin_top = 144.0
+margin_right = 320.0
+margin_bottom = 188.0
+script = ExtResource( 4 )
+
+[node name="WrapLabelContainer" type="VBoxContainer" parent="RecipeVbox/WrapCountContainer"]
+margin_right = 84.0
+margin_bottom = 44.0
+
+[node name="WrapLabel" type="RichTextLabel" parent="RecipeVbox/WrapCountContainer/WrapLabelContainer"]
+margin_right = 84.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 50, 20 )
+text = "Wrap"
+
+[node name="WrapOwnedContainer" type="HBoxContainer" parent="RecipeVbox/WrapCountContainer/WrapLabelContainer"]
+margin_top = 24.0
+margin_right = 84.0
+margin_bottom = 44.0
+
+[node name="WrapOwned" type="RichTextLabel" parent="RecipeVbox/WrapCountContainer/WrapLabelContainer/WrapOwnedContainer"]
+margin_right = 30.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 30, 20 )
+text = "100"
+
+[node name="WrapOwnedLabel" type="RichTextLabel" parent="RecipeVbox/WrapCountContainer/WrapLabelContainer/WrapOwnedContainer"]
+margin_left = 34.0
+margin_right = 84.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 50, 20 )
+text = "Boxes"
+
+[node name="WrapDesc" type="RichTextLabel" parent="RecipeVbox/WrapCountContainer"]
+margin_left = 88.0
+margin_right = 238.0
+margin_bottom = 44.0
+rect_min_size = Vector2( 150, 0 )
+text = "1 Box = 10 Musubi"
+
+[node name="MapButton" type="Button" parent="."]
+margin_left = 369.0
+margin_top = 446.0
+margin_right = 558.0
+margin_bottom = 488.0
+text = "Map"
+
+[connection signal="pressed" from="RecipeVbox/SpamCountContainer/SpamMinus" to="RecipeVbox/SpamCountContainer" method="_on_SpamMinus_pressed"]
+[connection signal="pressed" from="RecipeVbox/SpamCountContainer/SpamPlus" to="RecipeVbox/SpamCountContainer" method="_on_SpamPlus_pressed"]
+[connection signal="pressed" from="RecipeVbox/NoriCountContainer/NoriMinus" to="RecipeVbox/NoriCountContainer" method="_on_NoriMinus_pressed"]
+[connection signal="pressed" from="RecipeVbox/NoriCountContainer/NoriPlus" to="RecipeVbox/NoriCountContainer" method="_on_NoriPlus_pressed"]
+[connection signal="pressed" from="MapButton" to="." method="_on_MapButton_pressed"]

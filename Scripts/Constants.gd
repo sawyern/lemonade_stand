@@ -17,6 +17,9 @@ const RESULTS_SCENE = "Results"
 const SELL_SCENE = "Sell"
 const WELCOME_SCENE = "Welcome"
 
+const DEFAULT_SPAM_QTY = 6
+const DEFAULT_NORI_QTY = 4
+
 #ITEM COSTS
 const SPAM_1_PRICE = 2.00
 const SPAM_1_QTY = 1
