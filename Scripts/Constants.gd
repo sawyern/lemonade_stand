@@ -2,6 +2,13 @@ extends Node
 
 const START_MONEY = 100.00
 
+#MAP NAMES
+const LOC_1 = "Downtown"
+const LOC_2 = "Waikiki Beach"
+const LOC_3 = "Stadium"
+const LOC_4 = "University"
+
+#SCENE NAMES
 const IVENTORY_SCENE = "Inventory"
 const DIFFICULTY_SCENE = "Difficulty"
 const MAP_SCENE = "Map"
@@ -10,6 +17,7 @@ const RESULTS_SCENE = "Results"
 const SELL_SCENE = "Sell"
 const WELCOME_SCENE = "Welcome"
 
+#ITEM COSTS
 const SPAM_1_PRICE = 2.00
 const SPAM_1_QTY = 1
 const SPAM_2_PRICE = 1.80
@@ -38,9 +46,21 @@ const WRAP_2_QTY = 5
 const WRAP_3_PRICE = 1.25
 const WRAP_3_QTY = 10
 
+#DIFFICULTY VALUES - NUM OF DAYS IN SESSION
 const DIFFICULTY_1 = 7
 const DIFFICULTY_2 = 14
 const DIFFICULTY_3 = 21
+
+#WEATHER TYPES
+const WEATHER_SUNNY = "Sunny Partly Cloudy"
+const WEATHER_LIGHT_RAIN = "Light Rain"
+const WEATHER_OVERCAST = "Overcast"
+const WEATHER_HURRICANE = "Hurricane"
+const WEATHER_HOT_HUMID = "Hot and Humid"
+
+#SPECIAL EVENTS
+const EVENT_SPORTS = "Sports Game"
+
 
 # Given number, format as curreny, return as String
 # ie. 100.3 -> $100.30; 412.1111 -> $412.11
