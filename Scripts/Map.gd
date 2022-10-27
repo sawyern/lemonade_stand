@@ -4,6 +4,7 @@ extends Node2D
 func _ready():
 	$StatusContainer/LocationContainer/LocationSelected.text = ""
 	$StatusContainer/WeatherContainer/CurrentWeather.text = _rand_weather()
+	$StatusContainer/EventContainer/CurrentEvent.text = Globals.curr_day as String
 
 func _update_loc(loc):
 	Globals.curr_location = loc
@@ -13,11 +14,12 @@ func _rand_weather():
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
 	var num = rng.randf_range(0, 5)
+	Globals.curr_weather = Constants.WEATHER.values()[num]
 	return Constants.WEATHER.keys()[num].capitalize()
 
 func _on_Sell_pressed():
 	if $StatusContainer/LocationContainer/LocationSelected.text != "":
-		SceneLoader._load_scene("Sell")
+		SceneLoader._load_scene("Inventory")
 
 func _on_Downtown_pressed():
 	_update_loc(Constants.LOC_1)

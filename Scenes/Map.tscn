@@ -47,7 +47,7 @@ margin_left = 436.0
 margin_top = 515.0
 margin_right = 563.0
 margin_bottom = 563.0
-text = "Sell"
+text = "Inventory"
 
 [node name="StatusContainer" type="VBoxContainer" parent="."]
 margin_right = 40.0
@@ -95,7 +95,7 @@ margin_bottom = 98.0
 margin_right = 120.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 120, 30 )
-text = "Special Event:"
+text = "Day #"
 
 [node name="CurrentEvent" type="RichTextLabel" parent="StatusContainer/EventContainer"]
 margin_left = 124.0

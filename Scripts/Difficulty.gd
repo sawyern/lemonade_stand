@@ -13,4 +13,4 @@ func _on_Difficulty3_pressed():
 func _set_difficulty(diff):
 	Globals.total_days = diff
 	print("Total Days set to " + diff as String)
-	SceneLoader._load_scene("Inventory")
+	SceneLoader._load_scene("Map")

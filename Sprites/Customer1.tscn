@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20, 20 )
 
-[node name="StaticBody2D" type="StaticBody2D"]
+[node name="KinematicBody2D" type="KinematicBody2D"]
 rotation = 0.785398
 script = ExtResource( 1 )
 
@@ -17,5 +17,48 @@ margin_left = -20.0
 margin_top = -20.0
 margin_right = 20.0
 margin_bottom = 20.0
+rect_pivot_offset = Vector2( -86.4445, 91.5086 )
 
-[connection signal="tree_entered" from="." to="." method="_on_StaticBody2D_tree_entered"]
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = -10.6066
+margin_top = -6.36396
+margin_right = 1.3934
+margin_bottom = -2.36396
+rect_rotation = 45.0
+color = Color( 0.815686, 0.392157, 0.278431, 1 )
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+margin_left = 0.890103
+margin_top = -4.68792
+margin_right = 12.8901
+margin_bottom = -0.687916
+rect_rotation = 45.0
+rect_pivot_offset = Vector2( 8.34589, -9.71577 )
+color = Color( 0.815686, 0.392157, 0.278431, 1 )
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+margin_left = -6.36396
+margin_top = 7.77818
+margin_right = 5.63604
+margin_bottom = 11.7782
+rect_rotation = -45.0
+rect_pivot_offset = Vector2( 8.34589, -9.71577 )
+color = Color( 0.815686, 0.392157, 0.278431, 1 )
+
+[node name="NotEnoughSpam" type="RichTextLabel" parent="."]
+visible = false
+margin_left = -14.0
+margin_top = -37.0
+margin_right = 137.0
+margin_bottom = -20.0
+rect_rotation = -45.0
+text = "Not enough spam"
+
+[node name="NotEnoughNori" type="RichTextLabel" parent="."]
+visible = false
+margin_left = -4.94975
+margin_top = -28.9914
+margin_right = 146.05
+margin_bottom = -11.9914
+rect_rotation = -45.0
+text = "Not enough nori"

@@ -1,13 +1,6 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://Scripts/Sell.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Customer1.tscn" type="PackedScene" id=2]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 510.25, 24.625 )
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 25, 405.5 )
 
 [node name="Sell" type="Node2D"]
 script = ExtResource( 1 )
@@ -21,128 +14,18 @@ margin_right = 1024.0
 margin_bottom = 600.0
 color = Color( 0.521569, 0.827451, 0.552941, 1 )
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2( 400, 185 )
+[node name="SoldCountLabel" type="RichTextLabel" parent="."]
+margin_left = 43.0
+margin_top = 41.0
+margin_right = 147.0
+margin_bottom = 93.0
+rect_pivot_offset = Vector2( -533, -55 )
+text = "Sold Count:"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 111.75, 301 )
-shape = SubResource( 1 )
-
-[node name="Node2D" type="Node2D" parent="."]
-position = Vector2( 18, 0 )
-
-[node name="Customer1" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 192, 128 )
-
-[node name="Customer2" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 279, 130 )
-
-[node name="Customer3" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 368, 129 )
-
-[node name="Customer4" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 459, 129 )
-
-[node name="Customer5" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 553, 128 )
-
-[node name="Customer6" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 654, 126 )
-
-[node name="Customer7" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 751, 127 )
-
-[node name="Customer8" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 856, 127 )
-
-[node name="Customer9" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 131, 201 )
-
-[node name="Customer10" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 218, 203 )
-
-[node name="Customer11" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 307, 202 )
-
-[node name="Customer12" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 398, 202 )
-
-[node name="Customer13" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 492, 201 )
-
-[node name="Customer14" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 593, 199 )
-
-[node name="Customer15" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 690, 200 )
-
-[node name="Customer16" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 795, 200 )
-
-[node name="Customer17" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 192, 286 )
-
-[node name="Customer18" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 279, 288 )
-
-[node name="Customer19" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 368, 287 )
-
-[node name="Customer20" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 459, 287 )
-
-[node name="Customer21" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 553, 286 )
-
-[node name="Customer22" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 654, 284 )
-
-[node name="Customer23" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 751, 285 )
-
-[node name="Customer24" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 856, 285 )
-
-[node name="Customer25" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 130, 362 )
-
-[node name="Customer26" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 217, 364 )
-
-[node name="Customer27" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 306, 363 )
-
-[node name="Customer28" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 397, 363 )
-
-[node name="Customer29" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 491, 362 )
-
-[node name="Customer30" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 592, 360 )
-
-[node name="Customer31" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 689, 361 )
-
-[node name="Customer32" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 794, 361 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2( 210, 128 )
-scale = Vector2( 1, 1 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( -184, 109.5 )
-scale = Vector2( 1, 1 )
-shape = SubResource( 2 )
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2( 1183, 129 )
-scale = Vector2( 1, 1 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2( -184, 109.5 )
-scale = Vector2( 1, 1 )
-shape = SubResource( 2 )
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[node name="SoldCount" type="RichTextLabel" parent="."]
+margin_left = 117.0
+margin_top = 41.0
+margin_right = 221.0
+margin_bottom = 93.0
+rect_pivot_offset = Vector2( -533, -55 )
+text = "Sold Count:"
