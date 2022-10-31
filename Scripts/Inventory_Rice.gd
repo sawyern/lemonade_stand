@@ -25,5 +25,5 @@ func _on_Rice_3_pressed():
 		_update_label()
 		
 func _update_label():
-	$Rice_Label.text = "Bags of Rice: " + Globals.curr_rice as String
+	$Rice_Label.text = "Cups of Rice: " + Globals.curr_rice as String
 	$"../../../Money".text = Constants.as_currency(Globals.curr_money)

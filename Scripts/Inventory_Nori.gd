@@ -25,5 +25,5 @@ func _on_Nori_3_pressed():
 		_update_label()
 		
 func _update_label():
-	$Nori_Label.text = "Bags of Nori: " + Globals.curr_nori as String
+	$Nori_Label.text = "Sheets of Nori: " + Globals.curr_nori as String
 	$"../../../Money".text = Constants.as_currency(Globals.curr_money)

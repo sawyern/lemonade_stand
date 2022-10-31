@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Recipe_Spam.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Recipe_Nori.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/Recipe_Rice.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/Recipe_Wrap.gd" type="Script" id=4]
 [ext_resource path="res://Scripts/Recipe.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/Recipe_Cook.gd" type="Script" id=6]
 
 [node name="Recipe" type="Node2D"]
 script = ExtResource( 5 )
@@ -25,7 +26,7 @@ margin_right = 666.0
 margin_bottom = 336.0
 
 [node name="SpamCountContainer" type="HBoxContainer" parent="RecipeVbox"]
-margin_right = 320.0
+margin_right = 426.0
 margin_bottom = 44.0
 script = ExtResource( 1 )
 
@@ -87,7 +88,7 @@ text = "Slices Per Can"
 
 [node name="RiceCountContainer" type="HBoxContainer" parent="RecipeVbox"]
 margin_top = 48.0
-margin_right = 320.0
+margin_right = 426.0
 margin_bottom = 92.0
 script = ExtResource( 3 )
 
@@ -124,12 +125,11 @@ margin_left = 88.0
 margin_right = 238.0
 margin_bottom = 44.0
 rect_min_size = Vector2( 150, 0 )
-text = "1 Bag = 4 Cups
-1 Cup = 2 Musubi"
+text = "1 Cup = 2 Musubi"
 
 [node name="NoriCountContainer" type="HBoxContainer" parent="RecipeVbox"]
 margin_top = 96.0
-margin_right = 320.0
+margin_right = 426.0
 margin_bottom = 140.0
 script = ExtResource( 2 )
 
@@ -191,7 +191,7 @@ text = "Pieces Per Sheet"
 
 [node name="WrapCountContainer" type="HBoxContainer" parent="RecipeVbox"]
 margin_top = 144.0
-margin_right = 320.0
+margin_right = 426.0
 margin_bottom = 188.0
 script = ExtResource( 4 )
 
@@ -230,15 +230,77 @@ margin_bottom = 44.0
 rect_min_size = Vector2( 150, 0 )
 text = "1 Box = 10 Musubi"
 
+[node name="CookCount" type="HBoxContainer" parent="RecipeVbox"]
+margin_top = 192.0
+margin_right = 426.0
+margin_bottom = 242.0
+script = ExtResource( 6 )
+
+[node name="CookLabelContainer" type="VBoxContainer" parent="RecipeVbox/CookCount"]
+margin_right = 100.0
+margin_bottom = 50.0
+
+[node name="CookLabel" type="RichTextLabel" parent="RecipeVbox/CookCount/CookLabelContainer"]
+margin_right = 100.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+text = "How many will you cook?"
+
+[node name="CookMinus10" type="Button" parent="RecipeVbox/CookCount"]
+margin_left = 104.0
+margin_right = 137.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 20, 10 )
+text = "-10"
+
+[node name="CookMinus" type="Button" parent="RecipeVbox/CookCount"]
+margin_left = 141.0
+margin_right = 166.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 20, 10 )
+text = "-1"
+
+[node name="CookCount" type="RichTextLabel" parent="RecipeVbox/CookCount"]
+margin_left = 170.0
+margin_right = 200.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 30, 40 )
+text = "100"
+
+[node name="CookPlus" type="Button" parent="RecipeVbox/CookCount"]
+margin_left = 204.0
+margin_right = 232.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 20, 40 )
+text = "+1"
+
+[node name="CookPlus10" type="Button" parent="RecipeVbox/CookCount"]
+margin_left = 236.0
+margin_right = 272.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 20, 40 )
+text = "+10"
+
+[node name="CookDesc" type="RichTextLabel" parent="RecipeVbox/CookCount"]
+margin_left = 276.0
+margin_right = 426.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 150, 0 )
+text = "Musubi"
+
 [node name="MapButton" type="Button" parent="."]
 margin_left = 369.0
 margin_top = 446.0
 margin_right = 558.0
 margin_bottom = 488.0
-text = "Map"
+text = "Sell"
 
 [connection signal="pressed" from="RecipeVbox/SpamCountContainer/SpamMinus" to="RecipeVbox/SpamCountContainer" method="_on_SpamMinus_pressed"]
 [connection signal="pressed" from="RecipeVbox/SpamCountContainer/SpamPlus" to="RecipeVbox/SpamCountContainer" method="_on_SpamPlus_pressed"]
 [connection signal="pressed" from="RecipeVbox/NoriCountContainer/NoriMinus" to="RecipeVbox/NoriCountContainer" method="_on_NoriMinus_pressed"]
 [connection signal="pressed" from="RecipeVbox/NoriCountContainer/NoriPlus" to="RecipeVbox/NoriCountContainer" method="_on_NoriPlus_pressed"]
+[connection signal="pressed" from="RecipeVbox/CookCount/CookMinus10" to="RecipeVbox/CookCount" method="_on_CookMinus10_pressed"]
+[connection signal="pressed" from="RecipeVbox/CookCount/CookMinus" to="RecipeVbox/CookCount" method="_on_CookMinus_pressed"]
+[connection signal="pressed" from="RecipeVbox/CookCount/CookPlus" to="RecipeVbox/CookCount" method="_on_CookPlus_pressed"]
+[connection signal="pressed" from="RecipeVbox/CookCount/CookPlus10" to="RecipeVbox/CookCount" method="_on_CookPlus10_pressed"]
 [connection signal="pressed" from="MapButton" to="." method="_on_MapButton_pressed"]
