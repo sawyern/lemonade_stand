@@ -16,5 +16,6 @@ func _physics_process(delta):
 	rotate(-.01)
 
 
-func _hit():
-	get_parent().remove_child(self)
+func _hit(is_sold):
+	if is_sold:
+		get_parent().remove_child(self)

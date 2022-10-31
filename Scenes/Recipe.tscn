@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Recipe_Spam.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Recipe_Nori.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scripts/Recipe_Wrap.gd" type="Script" id=4]
 [ext_resource path="res://Scripts/Recipe.gd" type="Script" id=5]
 [ext_resource path="res://Scripts/Recipe_Cook.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/Recipe_Price.gd" type="Script" id=7]
 
 [node name="Recipe" type="Node2D"]
 script = ExtResource( 5 )
@@ -20,10 +21,10 @@ margin_bottom = 600.0
 color = Color( 0.796078, 0.521569, 0.227451, 1 )
 
 [node name="RecipeVbox" type="VBoxContainer" parent="."]
-margin_left = 346.0
-margin_top = 148.0
-margin_right = 666.0
-margin_bottom = 336.0
+margin_left = 332.0
+margin_top = 81.0
+margin_right = 758.0
+margin_bottom = 377.0
 
 [node name="SpamCountContainer" type="HBoxContainer" parent="RecipeVbox"]
 margin_right = 426.0
@@ -288,11 +289,62 @@ margin_bottom = 50.0
 rect_min_size = Vector2( 150, 0 )
 text = "Musubi"
 
+[node name="Price" type="HBoxContainer" parent="RecipeVbox"]
+margin_top = 246.0
+margin_right = 426.0
+margin_bottom = 296.0
+script = ExtResource( 7 )
+
+[node name="PriceLabelContainer" type="VBoxContainer" parent="RecipeVbox/Price"]
+margin_right = 100.0
+margin_bottom = 50.0
+
+[node name="CookLabel" type="RichTextLabel" parent="RecipeVbox/Price/PriceLabelContainer"]
+margin_right = 100.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+text = "Set Musubi Price"
+
+[node name="CookMinus1" type="Button" parent="RecipeVbox/Price"]
+margin_left = 104.0
+margin_right = 157.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 20, 10 )
+text = "-$1.00"
+
+[node name="CookMinus10" type="Button" parent="RecipeVbox/Price"]
+margin_left = 161.0
+margin_right = 214.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 20, 10 )
+text = "-$0.10"
+
+[node name="CookCount" type="RichTextLabel" parent="RecipeVbox/Price"]
+margin_left = 218.0
+margin_right = 248.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 30, 40 )
+text = "100"
+
+[node name="CookPlus10" type="Button" parent="RecipeVbox/Price"]
+margin_left = 252.0
+margin_right = 308.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 20, 40 )
+text = "+$0.10"
+
+[node name="CookPlus1" type="Button" parent="RecipeVbox/Price"]
+margin_left = 312.0
+margin_right = 368.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 20, 40 )
+text = "+$1.00"
+
 [node name="MapButton" type="Button" parent="."]
-margin_left = 369.0
-margin_top = 446.0
-margin_right = 558.0
-margin_bottom = 488.0
+margin_left = 415.0
+margin_top = 438.0
+margin_right = 604.0
+margin_bottom = 480.0
 text = "Sell"
 
 [connection signal="pressed" from="RecipeVbox/SpamCountContainer/SpamMinus" to="RecipeVbox/SpamCountContainer" method="_on_SpamMinus_pressed"]
@@ -303,4 +355,8 @@ text = "Sell"
 [connection signal="pressed" from="RecipeVbox/CookCount/CookMinus" to="RecipeVbox/CookCount" method="_on_CookMinus_pressed"]
 [connection signal="pressed" from="RecipeVbox/CookCount/CookPlus" to="RecipeVbox/CookCount" method="_on_CookPlus_pressed"]
 [connection signal="pressed" from="RecipeVbox/CookCount/CookPlus10" to="RecipeVbox/CookCount" method="_on_CookPlus10_pressed"]
+[connection signal="pressed" from="RecipeVbox/Price/CookMinus1" to="RecipeVbox/Price" method="_on_CookMinus1_pressed"]
+[connection signal="pressed" from="RecipeVbox/Price/CookMinus10" to="RecipeVbox/Price" method="_on_CookMinus10_pressed"]
+[connection signal="pressed" from="RecipeVbox/Price/CookPlus10" to="RecipeVbox/Price" method="_on_CookPlus10_pressed"]
+[connection signal="pressed" from="RecipeVbox/Price/CookPlus1" to="RecipeVbox/Price" method="_on_CookPlus1_pressed"]
 [connection signal="pressed" from="MapButton" to="." method="_on_MapButton_pressed"]
