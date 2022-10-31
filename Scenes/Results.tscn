@@ -21,4 +21,11 @@ margin_right = 545.0
 margin_bottom = 515.0
 text = "Next Day"
 
+[node name="ResultsText" type="RichTextLabel" parent="."]
+margin_left = 245.0
+margin_top = 123.0
+margin_right = 726.0
+margin_bottom = 328.0
+text = "test"
+
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

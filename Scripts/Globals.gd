@@ -18,7 +18,7 @@ var wrap_box_per_musubi = 12
 
 var curr_location = Constants.LOC_1
 var curr_weather = Constants.WEATHER.SUNNY_LIGHT_RAIN
-var curr_musubi_price = 1.00
+var curr_musubi_price = 2.00
 
 var sold_count = 0
 var num_cooked = 0
