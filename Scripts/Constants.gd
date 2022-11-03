@@ -1,6 +1,6 @@
 extends Node
 
-const START_MONEY = 250.00
+const START_MONEY = 100.00
 
 #MAP NAMES
 const LOC_1 = "Downtown"
@@ -21,18 +21,18 @@ const DEFAULT_SPAM_QTY = 6
 const DEFAULT_NORI_QTY = 4
 
 #ITEM COSTS
-const SPAM_1_PRICE = 3.50
+const SPAM_1_PRICE = 3
 const SPAM_1_QTY = 1
-const SPAM_2_PRICE = 3.25
+const SPAM_2_PRICE = 2.85
 const SPAM_2_QTY = 5
-const SPAM_3_PRICE = 3.00
+const SPAM_3_PRICE = 2.70
 const SPAM_3_QTY = 10
 
-const RICE_1_PRICE = 1.00
+const RICE_1_PRICE = .7
 const RICE_1_QTY = 1
-const RICE_2_PRICE = .90
+const RICE_2_PRICE = .5
 const RICE_2_QTY = 5
-const RICE_3_PRICE = .85
+const RICE_3_PRICE = .3
 const RICE_3_QTY = 10
 
 const NORI_1_PRICE = .3
@@ -42,11 +42,11 @@ const NORI_2_QTY = 5
 const NORI_3_PRICE = .23
 const NORI_3_QTY = 10
 
-const WRAP_1_PRICE = 3
+const WRAP_1_PRICE = 2
 const WRAP_1_QTY = 1
-const WRAP_2_PRICE = 2.50
+const WRAP_2_PRICE = 1.75
 const WRAP_2_QTY = 5
-const WRAP_3_PRICE = 2.00
+const WRAP_3_PRICE = 1.50
 const WRAP_3_QTY = 10
 
 #DIFFICULTY VALUES - NUM OF DAYS IN SESSION
@@ -73,7 +73,6 @@ enum WEATHER {
 
 #SPECIAL EVENTS
 const EVENT_SPORTS = "Sports Game"
-
 
 # Given number, format as curreny, return as String
 # ie. 100.3 -> $100.30; 412.1111 -> $412.11

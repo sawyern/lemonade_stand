@@ -9,6 +9,7 @@ func _ready():
 func _update_loc(loc):
 	Globals.curr_location = loc
 	$StatusContainer/LocationContainer/LocationSelected.text = Globals.curr_location
+	SceneLoader._load_scene("Inventory")
 
 func _rand_weather():
 	var rng = RandomNumberGenerator.new()
@@ -17,9 +18,6 @@ func _rand_weather():
 	Globals.curr_weather = Constants.WEATHER.values()[num]
 	return Constants.WEATHER.keys()[num].capitalize()
 
-func _on_Sell_pressed():
-	if $StatusContainer/LocationContainer/LocationSelected.text != "":
-		SceneLoader._load_scene("Inventory")
 
 func _on_Downtown_pressed():
 	_update_loc(Constants.LOC_1)
