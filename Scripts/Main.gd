@@ -11,6 +11,9 @@ func _restart():
 	Globals.curr_rice = 0
 	Globals.curr_nori = 0
 	Globals.curr_wrap = 0
-	
+
+	SoundManager.main = self
 	SceneLoader.main = self
 	SceneLoader._load_scene("Welcome")
+	SoundManager._start_bgm()
+

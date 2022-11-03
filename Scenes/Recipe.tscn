@@ -347,6 +347,13 @@ margin_right = 604.0
 margin_bottom = 480.0
 text = "Sell"
 
+[node name="BackButton" type="Button" parent="."]
+margin_left = 34.0
+margin_top = 33.0
+margin_right = 108.0
+margin_bottom = 70.0
+text = "Back"
+
 [connection signal="pressed" from="RecipeVbox/SpamCountContainer/SpamMinus" to="RecipeVbox/SpamCountContainer" method="_on_SpamMinus_pressed"]
 [connection signal="pressed" from="RecipeVbox/SpamCountContainer/SpamPlus" to="RecipeVbox/SpamCountContainer" method="_on_SpamPlus_pressed"]
 [connection signal="pressed" from="RecipeVbox/NoriCountContainer/NoriMinus" to="RecipeVbox/NoriCountContainer" method="_on_NoriMinus_pressed"]
@@ -360,3 +367,4 @@ text = "Sell"
 [connection signal="pressed" from="RecipeVbox/Price/CookPlus10" to="RecipeVbox/Price" method="_on_CookPlus10_pressed"]
 [connection signal="pressed" from="RecipeVbox/Price/CookPlus1" to="RecipeVbox/Price" method="_on_CookPlus1_pressed"]
 [connection signal="pressed" from="MapButton" to="." method="_on_MapButton_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]

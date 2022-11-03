@@ -42,13 +42,6 @@ margin_right = 837.0
 margin_bottom = 269.0
 text = "University"
 
-[node name="Sell" type="Button" parent="."]
-margin_left = 436.0
-margin_top = 515.0
-margin_right = 563.0
-margin_bottom = 563.0
-text = "Inventory"
-
 [node name="StatusContainer" type="VBoxContainer" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
@@ -107,4 +100,3 @@ rect_min_size = Vector2( 120, 30 )
 [connection signal="pressed" from="Waikiki" to="." method="_on_Waikiki_pressed"]
 [connection signal="pressed" from="Stadium" to="." method="_on_Stadium_pressed"]
 [connection signal="pressed" from="University" to="." method="_on_University_pressed"]
-[connection signal="pressed" from="Sell" to="." method="_on_Sell_pressed"]

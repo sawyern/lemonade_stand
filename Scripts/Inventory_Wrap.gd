@@ -25,5 +25,5 @@ func _on_Wrap_3_pressed():
 		_update_label()
 		
 func _update_label():
-	$Wrap_Label.text = "Cans of Wrap: " + Globals.curr_wrap as String
+	$Wrap_Label.text = "Boxes of Wrap: " + Globals.curr_wrap as String
 	$"../../../Money".text = Constants.as_currency(Globals.curr_money)

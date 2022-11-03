@@ -29,6 +29,7 @@ config/icon="res://icon.png"
 SceneLoader="*res://Scripts/SceneLoader.gd"
 Constants="*res://Scripts/Constants.gd"
 Globals="*res://Scripts/Globals.gd"
+SoundManager="*res://Scripts/SoundManager.gd"
 
 [editor]
 
