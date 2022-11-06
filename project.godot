@@ -31,6 +31,13 @@ Constants="*res://Scripts/Constants.gd"
 Globals="*res://Scripts/Globals.gd"
 SoundManager="*res://Scripts/SoundManager.gd"
 
+[display]
+
+window/size/resizable=false
+window/size/fullscreen=true
+window/vsync/use_vsync=false
+window/stretch/mode="viewport"
+
 [editor]
 
 version_control_autoload_on_startup=true

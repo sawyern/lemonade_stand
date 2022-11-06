@@ -71,9 +71,6 @@ enum WEATHER {
 	HURRICANE = 5
 }
 
-#SPECIAL EVENTS
-const EVENT_SPORTS = "Sports Game"
-
 # Given number, format as curreny, return as String
 # ie. 100.3 -> $100.30; 412.1111 -> $412.11
 static func as_currency(number):

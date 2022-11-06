@@ -52,7 +52,7 @@ func _check_sold():
 			$TooExpensive.visible = true
 			is_sold = false		
 	elif Globals.curr_musubi_price < 3:
-		if rand < 0.05:
+		if rand < 0.01:
 			$TooExpensive.visible = true
 			is_sold = false
 	if is_sold:

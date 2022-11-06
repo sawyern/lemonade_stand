@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Sprites/Customer1.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Fonts/Foglihten-068.otf" type="DynamicFontData" id=2]
-[ext_resource path="res://Assets/Images/Customer2.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Images/Customer1.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20, 20 )
@@ -55,7 +55,7 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 2 )
 text = "Too Expensive"
 
-[node name="Customer2" type="Sprite" parent="."]
-position = Vector2( 0, -4 )
-scale = Vector2( 0.128125, 0.128125 )
-texture = ExtResource( 4 )
+[node name="Customer1" type="Sprite" parent="."]
+position = Vector2( 0, -2.66667 )
+scale = Vector2( 0.130729, 0.130729 )
+texture = ExtResource( 3 )

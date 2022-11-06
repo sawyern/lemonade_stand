@@ -2,13 +2,11 @@ extends Node2D
 
 
 func _ready():
-	$StatusContainer/LocationContainer/LocationSelected.text = ""
 	$StatusContainer/WeatherContainer/CurrentWeather.text = _rand_weather()
 	$StatusContainer/EventContainer/CurrentEvent.text = Globals.curr_day as String
 
 func _update_loc(loc):
 	Globals.curr_location = loc
-	$StatusContainer/LocationContainer/LocationSelected.text = Globals.curr_location
 	SceneLoader._load_scene("Inventory")
 
 func _rand_weather():
