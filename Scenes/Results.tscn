@@ -1,36 +1,59 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/Results.gd" type="Script" id=1]
 [ext_resource path="res://Sounds/badass-victory.wav" type="AudioStream" id=2]
+[ext_resource path="res://Assets/Fonts/MochaCookies.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/Fonts/Foglihten-068.otf" type="DynamicFontData" id=4]
+[ext_resource path="res://Assets/Images/ResultsImage.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 25
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 70
+font_data = ExtResource( 3 )
 
 [node name="Results" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="Background" type="ColorRect" parent="."]
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_right = 1024.0
-margin_bottom = 600.0
-color = Color( 0.611765, 0.698039, 0.960784, 1 )
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 512, 300 )
+texture = ExtResource( 5 )
 
 [node name="Button" type="Button" parent="."]
-margin_left = 423.0
-margin_top = 470.0
-margin_right = 545.0
-margin_bottom = 515.0
-text = "Next Day"
+margin_left = 445.0
+margin_top = 471.0
+margin_right = 577.0
+margin_bottom = 516.0
+custom_fonts/font = SubResource( 1 )
+text = "DO EM AGAIN"
 
 [node name="ResultsText" type="RichTextLabel" parent="."]
 margin_left = 245.0
 margin_top = 123.0
 margin_right = 726.0
 margin_bottom = 328.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 2 )
 text = "test"
 
 [node name="VictoryPlayer" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 2 )
 autoplay = true
+
+[node name="Heading" type="Label" parent="."]
+margin_left = 414.0
+margin_top = 10.0
+margin_right = 606.0
+margin_bottom = 77.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "ALL PAU"
+align = 1
+valign = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

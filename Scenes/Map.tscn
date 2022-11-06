@@ -1,93 +1,113 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scripts/Map.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Images/MapImage.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Fonts/Foglihten-068.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/Fonts/MochaCookies.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=9]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=10]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 70
+font_data = ExtResource( 4 )
 
 [node name="Map" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="Background" type="ColorRect" parent="."]
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_right = 1024.0
-margin_bottom = 600.0
-color = Color( 0.0392157, 0.67451, 0.631373, 1 )
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 512, 300 )
+texture = ExtResource( 2 )
 
 [node name="Downtown" type="Button" parent="."]
-margin_left = 288.0
-margin_top = 371.0
-margin_right = 415.0
-margin_bottom = 419.0
+margin_left = 499.0
+margin_top = 494.0
+margin_right = 589.0
+margin_bottom = 530.0
+custom_fonts/font = SubResource( 1 )
 text = "Downtown"
 
 [node name="Waikiki" type="Button" parent="."]
-margin_left = 474.0
-margin_top = 369.0
-margin_right = 601.0
-margin_bottom = 417.0
+margin_left = 685.0
+margin_top = 534.0
+margin_right = 786.0
+margin_bottom = 571.0
+custom_fonts/font = SubResource( 2 )
 text = "Waikiki Beach"
 
 [node name="Stadium" type="Button" parent="."]
-margin_left = 670.0
-margin_top = 367.0
-margin_right = 797.0
-margin_bottom = 415.0
+margin_left = 455.0
+margin_top = 388.0
+margin_right = 540.0
+margin_bottom = 420.0
+custom_fonts/font = SubResource( 3 )
 text = "Stadium"
 
 [node name="University" type="Button" parent="."]
-margin_left = 710.0
-margin_top = 221.0
-margin_right = 837.0
-margin_bottom = 269.0
+margin_left = 674.0
+margin_top = 434.0
+margin_right = 757.0
+margin_bottom = 468.0
+custom_fonts/font = SubResource( 4 )
 text = "University"
 
 [node name="StatusContainer" type="VBoxContainer" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
 
-[node name="LocationContainer" type="HBoxContainer" parent="StatusContainer"]
-margin_right = 244.0
-margin_bottom = 30.0
-
-[node name="LocationLabel" type="RichTextLabel" parent="StatusContainer/LocationContainer"]
-margin_right = 120.0
-margin_bottom = 30.0
-rect_min_size = Vector2( 120, 30 )
-text = "Selected Location:"
-
-[node name="LocationSelected" type="RichTextLabel" parent="StatusContainer/LocationContainer"]
-margin_left = 124.0
-margin_right = 244.0
-margin_bottom = 30.0
-rect_min_size = Vector2( 120, 30 )
-
 [node name="WeatherContainer" type="HBoxContainer" parent="StatusContainer"]
-margin_top = 34.0
 margin_right = 244.0
-margin_bottom = 64.0
+margin_bottom = 80.0
 
 [node name="WeatherLabel" type="RichTextLabel" parent="StatusContainer/WeatherContainer"]
 margin_right = 120.0
-margin_bottom = 30.0
-rect_min_size = Vector2( 120, 30 )
+margin_bottom = 80.0
+rect_min_size = Vector2( 120, 80 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 6 )
 text = "Weather:"
 
 [node name="CurrentWeather" type="RichTextLabel" parent="StatusContainer/WeatherContainer"]
 margin_left = 124.0
 margin_right = 244.0
-margin_bottom = 30.0
-rect_min_size = Vector2( 120, 30 )
+margin_bottom = 80.0
+rect_min_size = Vector2( 120, 80 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 9 )
+text = "test font"
 
 [node name="EventContainer" type="HBoxContainer" parent="StatusContainer"]
-margin_top = 68.0
+margin_top = 84.0
 margin_right = 244.0
-margin_bottom = 98.0
+margin_bottom = 114.0
 
 [node name="EventLabel" type="RichTextLabel" parent="StatusContainer/EventContainer"]
 margin_right = 120.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 120, 30 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 7 )
 text = "Day #"
 
 [node name="CurrentEvent" type="RichTextLabel" parent="StatusContainer/EventContainer"]
@@ -95,6 +115,19 @@ margin_left = 124.0
 margin_right = 244.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 120, 30 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 10 )
+
+[node name="Header" type="Label" parent="."]
+margin_left = 618.0
+margin_top = 15.0
+margin_right = 1013.0
+margin_bottom = 82.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "WEA WE GOING?"
+align = 1
+valign = 1
 
 [connection signal="pressed" from="Downtown" to="." method="_on_Downtown_pressed"]
 [connection signal="pressed" from="Waikiki" to="." method="_on_Waikiki_pressed"]
